@@ -1,0 +1,42 @@
+/* Header style start */
+
+.logo-container {
+  width: 5%;
+  padding: 10px;
+}
+
+.logo {
+  width: 30px;
+}
+
+.search-field {
+  padding: 0px;
+  width: 30%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+#search-input {
+  width: 100%;
+}
+
+.dropdown-menu:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-color: transparent transparent #ffffff transparent;
+  z-index: 9999;
+}
+
+.avatar {
+  width: 20px;
+}
+
+
