@@ -3,6 +3,7 @@
   // Genetare and set avatar for personal IP
   (function setAvatar() {
     $('.avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
+    $('.content-avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
   })();
 
   // Set user IP in name field in menu
@@ -18,6 +19,12 @@
         $(this).attr("src", "img/github-mark.png");
       }
     );
+  })();
+
+  (function setActiveItem() {
+    $('.dropdown-menu li').hover(function () {
+      $(this).toggleClass("active");
+    });
   })();
 
   // Redirect user on tru github search page after form submit 

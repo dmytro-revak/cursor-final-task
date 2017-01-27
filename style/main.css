@@ -1,4 +1,5 @@
 /* Header style start */
+
 .navbar-nav > li > .dropdown-menu {
   margin-top: 5px;
 }
@@ -62,5 +63,20 @@
 .avatar {
   width: 20px;
 }
+
+/* Header style end */
+
+/* Main content style start */
+
+.content-avatar {
+  width: 30px;
+}
+
+.menu-user-name.content {
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+}
+
 
 
