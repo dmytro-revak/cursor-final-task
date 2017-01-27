@@ -1,4 +1,7 @@
 /* Header style start */
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 5px;
+}
 
 .logo-container {
   width: 5%;
@@ -7,6 +10,10 @@
 
 .logo {
   width: 30px;
+}
+
+.logo:hover {
+  background-image: url(../img/github-mark-blue.png);
 }
 
 .search-field {
@@ -18,8 +25,29 @@
   width: 100%;
 }
 
-#search-input {
+.navbar-form .form-group .search-input {
   width: 100%;
+}
+
+.navbar-default .navbar-nav .nav-link {
+  color: #625555;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.plus-caret {
+  font-size: 20px;
+}
+
+.caret {
+  border-width: 5px;
+}
+
+.dropdown-header-item {
+  display: block;
+}
+.menu-user-name {
+  font-weight: bold;
 }
 
 .dropdown-menu:after {
