@@ -16,93 +16,124 @@
   </head>
   <body>
     <!-- Header start -->
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Logo start-->
-        <div class="navbar-header logo-container">
-          <a href="index.html">
-            <img src="img/github-mark.png" class="logo">
-          </a>
-        </div>
-        <!-- Logo end -->
-        <!-- Search field start -->
-        <form class="navbar-form navbar-left search-field">
-          <div class="form-group">
-            <input type="text" class="form-control search-input" placeholder="Search GitHub">
+    <div class="container-fluid header">
+      <div class="row navigation">
+          <nav class="navbar navbar-default">
+            <div class="container">
+            <!-- Logo start-->
+            <div class="navbar-header logo-container">
+              <a href="index.html">
+                <img src="img/github-mark.png" class="logo">
+              </a>
+            </div>
+            <!-- Logo end -->
+            <!-- Search field start -->
+            <form class="navbar-form navbar-left search-field">
+              <div class="form-group">
+                <input type="text" class="form-control search-input" placeholder="Search GitHub">
+              </div>
+            </form>
+            <!-- Search field end -->
+            <!-- Navigation links start -->
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="https://github.com/pulls" class="nav-link">Pull requests</a>
+              </li>
+              <li>
+                <a href="https://github.com/issues" class="nav-link">Issues</a>
+              </li>
+              <li>
+                <a href="https://gist.github.com/" class="nav-link">Gist</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle plus-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span>+</span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="https://github.com/new">New repository</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/new/import">Create repository</a>
+                  </li>
+                  <li>
+                    <a href="https://gist.github.com/">New gist</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/organizations/new">New organization</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="https://robohash.org/#.png" class="avatar"> 
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header"><span class="dropdown-header-item">Signed in as </span>
+                    <span class="dropdown-header-item menu-user-name"></span>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="#">Your profile</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stars">Your stars</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/explore">Explore</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/integrations">Integrations</a>
+                  </li>
+                  <li>
+                    <a href="https://help.github.com/">Help</a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="https://github.com/settings/profile">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#">Sign out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Navigation links end -->
           </div>
-        </form>
-        <!-- Search field end -->
-        <!-- Navigation links start -->
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="https://github.com/pulls" class="nav-link">Pull requests</a>
-          </li>
-          <li>
-            <a href="https://github.com/issues" class="nav-link">Issues</a>
-          </li>
-          <li>
-            <a href="https://gist.github.com/" class="nav-link">Gist</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle plus-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span>+</span><span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="https://github.com/new">New repository</a>
-              </li>
-              <li>
-                <a href="https://github.com/new/import">Create repository</a>
-              </li>
-              <li>
-                <a href="https://gist.github.com/">New gist</a>
-              </li>
-              <li>
-                <a href="https://github.com/organizations/new">New organization</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <img src="https://robohash.org/#.png" class="avatar"> 
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-header"><span class="dropdown-header-item">Signed in as </span>
-                <span class="dropdown-header-item menu-user-name"></span>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#">Your profile</a>
-              </li>
-              <li>
-                <a href="https://github.com/stars">Your stars</a>
-              </li>
-              <li>
-                <a href="https://github.com/explore">Explore</a>
-              </li>
-              <li>
-                <a href="https://github.com/integrations">Integrations</a>
-              </li>
-              <li>
-                <a href="https://help.github.com/">Help</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="https://github.com/settings/profile">Settings</a>
-              </li>
-              <li>
-                <a href="#">Sign out</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- Navigation links end -->
+        </nav>
       </div>
-    </nav>
-    <!-- Header end -->
+      <!-- Header end -->
+      <!-- Main content start -->
+      <div class="row main-content">
+        <div class="left-side-content col-lg-8">
+        <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+
+            <li role="separator" class="divider"></li>
+          </ul>
+        </div>
+        <div class="right-side-content col-lg-4">
+          
+        </div>
+      </div> 
+      <!-- Main content end -->
+    </div>
+    
 
 
 

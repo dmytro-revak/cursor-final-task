@@ -12,10 +12,6 @@
   width: 30px;
 }
 
-.logo:hover {
-  background-image: url(../img/github-mark-blue.png);
-}
-
 .search-field {
   padding: 0px;
   width: 30%;
