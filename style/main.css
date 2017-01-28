@@ -78,11 +78,6 @@
   line-height: 30px;
 }
 
-.navbar.navbar-default.dashboard-nav {
-  margin-top: 5px;
-  padding: 5px;
-}
-
 .support-icon {
   width: 40px;
   position: absolute;
@@ -115,4 +110,50 @@
   float: right;
     margin-bottom: 15px;
     margin-left: 20px;
+}
+
+.dashboard {
+      border: solid 1px #d8d8d8;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.news-list-item {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel.panel-default {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+
+}
+.last-commits-panel {
+  margin-top: 25px;
+}
+
+.commits-panel {
+  padding: 10px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.fork-symbol {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.forked-repo-text {
+  color: blue;
 }
