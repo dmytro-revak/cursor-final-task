@@ -24,7 +24,7 @@
   // Set blue color to active list item 
   (function setActiveItem() {
     $('.dropdown-menu li').hover(function () {
-      $(this).toggleClass("active");
+      $(this).toggleClass('active');
     });
   })();
 
@@ -57,13 +57,31 @@
 
 
 
-  (function () {
-    var $switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news');
-    $($switchDahboardContent).on('click', function () {
-      alert('Switch dashboard context');
+  (function setAlertsOnTheButtons() {
+    var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
+        dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news');
+    
+    $(switchDahboardContent).on('click', function () {
+      alert('Switch dashboard content');
     });
-      
+    $(dashboardCloseButton).on('click', function () {
+      alert('Close dashboard content');
+    });
   })();
+    
+    
+
+    // (function setCheckedSymbol() {
+    //   var checkedSymbols = $('.check-item');
+    //   $(checkedSymbols).each(function () {
+    //   debugger
+    //     $(this).on('click', function () {
+    //       $($(this) > '.check-sumbol').toggleClass('.hidden-symbol');
+    //     }); 
+    //   });
+    // })();
+      
+    // todo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 

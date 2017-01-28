@@ -82,8 +82,17 @@
 /* Header style end */
 
 /* Main content style start */
+
+/*Button with user menu start*/
+
 .content-avatar {
   width: 30px;
+}
+
+.menu-user-name.content {
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
 }
 
 .dropdown-menu.user-menu {
@@ -91,38 +100,48 @@
   padding-top: 0;
 }
 
-
-
-
-
-/*.close-button {
-    padding: 0;
-    background: transparent;
-    border: 0;
-    outline: none;
-}*/
-
-
-
 .dropdown-menu-header {
   background-color: #F5F5F5;
   font-weight: bold;
   border: solid 1px #d8d8d8;
+  border-top: none;
   padding: 8px 10px;
 }
 
+.menu-logo {
+  width: 15px;
+  margin-left: 7px;
+}
+
+.check-sumbol {
+  display: inline-block;
+  width: 12px;
+}
+
+.hidden-symbol {
+  visibility: hidden;
+}
+
+.support-menu-logo {
+  width: 30px;
+  margin-left: -10px;
+}
+
+.plus-symbol {
+  margin-right: 10px;
+}
+
+/*Button with user menu end*/
 
 .dashboard {
-      border: solid 1px #d8d8d8;
+  border: solid 1px #d8d8d8;
   margin-top: 15px;
   padding: 5px;
 }
 
-
-.menu-user-name.content {
-  height: 30px;
-  display: inline-block;
-  line-height: 30px;
+.icon-button-dashboard-wrapper {
+  padding-right: 10px;
+  font-weight: bold;
 }
 
 .support-icon {
