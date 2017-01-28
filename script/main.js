@@ -53,7 +53,12 @@
     }
   })();
 
-
+// Set amount of contribute repositories
+(function setContributeAmount() {
+  var contributeItemAmount = $('.panel-item');
+  var contributeAmount = contributeItemAmount.length;
+  $('.contribute-amount').text(contributeAmount);
+})();
 
 
 

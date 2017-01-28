@@ -290,3 +290,49 @@
 }
 
 /*Broadcasts end*/
+
+/*Contributes repositories start*/
+
+.panel-heading {
+  padding: 9px 10px 10px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 17px;
+  background-color: #f5f5f5;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px 3px 0 0;
+}
+
+.panel-item {
+  color: #666;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-top: none;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 6px;
+}
+
+.contribute-logo {
+  width: 24px;
+  margin-right: 3%;
+}
+
+.repository-info {
+  display: inline-block;
+  float: right;
+}
+
+.contribute-amount {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background-color: #babec0;
+  border-radius: 20px;
+}
+
+/*Contributes repositories end*/
