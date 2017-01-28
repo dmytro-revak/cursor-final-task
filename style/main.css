@@ -135,10 +135,7 @@
 
 
 .panel.panel-default {
-  border-right: none;
-  border-left: none;
-  border-top: none;
-
+  border: none;
 }
 .last-commits-panel {
   margin-top: 25px;
@@ -154,6 +151,31 @@
   margin-right: 5px;
 }
 
-.forked-repo-text {
+.text-link {
   color: blue;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+.textinfo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.subscribe-symbol {
+  width: 15px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.subscribe-link-news {
+  text-decoration: none;
+  color: black;
 }
