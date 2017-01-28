@@ -278,3 +278,15 @@
 }
       
 /*News/blog panel end*/
+
+/*Broadcasts start*/
+
+.broadcasts {
+  margin: 10px 0;
+}
+
+.broadcasts-text {
+  float: right;
+}
+
+/*Broadcasts end*/
