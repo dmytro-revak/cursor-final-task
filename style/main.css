@@ -78,5 +78,41 @@
   line-height: 30px;
 }
 
+.navbar.navbar-default.dashboard-nav {
+  margin-top: 5px;
+  padding: 5px;
+}
 
+.support-icon {
+  width: 40px;
+  position: absolute;
+}
 
+.dashboard-header {
+  display: inline-block;
+  margin: 20px 0 0 45px;
+  font-size: 18px;
+}
+.close-news {
+  position: absolute;
+  left: 695px;
+}
+
+.dashboard-menu-wrapper {
+  margin-left: 10px;
+  }
+
+.dashboard-paragraph {
+  margin: 10px 0 10px 45px;
+  }
+
+.dashboard-menu-list {
+  margin-left: 20px; 
+}
+
+.inset-figure {
+  float: right;
+  float: right;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
