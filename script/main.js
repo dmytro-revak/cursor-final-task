@@ -57,16 +57,24 @@
 
 
 
-  (function setAlertsOnTheButtons() {
+  (function setFunctionsOnTheButtons() {
     var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
-        dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news');
+        dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news'),
+        newsInformationClose = $('.no-gutter .close-news');
     
     $(switchDahboardContent).on('click', function () {
+      // setRandomDate();
       alert('Switch dashboard content');
     });
+
     $(dashboardCloseButton).on('click', function () {
-      alert('Close dashboard content');
+      $('.dashboard').css('display', 'none');
     });
+
+   $(newsInformationClose).on('click', function () {
+      $('.news-content').css('display', 'none');
+    });
+
   })();
     
     

@@ -83,6 +83,11 @@
 
 /* Main content style start */
 
+.row .right-side-content.col-lg-4.no-gutter {
+  padding-right:0;
+  padding-left:0;
+}
+
 /*Button with user menu start*/
 
 .content-avatar {
@@ -245,3 +250,31 @@
 /*Information part end*/
 
 
+/*News/blog panel start*/
+
+.news-content {
+  padding: 10px 10px 10px 10px;
+  border: solid 1px #4078c0;
+  border-radius: 3px;
+}
+
+.news-content-header-picture{
+  width: 10%;
+  float: left;
+}
+
+.news-content-header-heading {
+  font-size: 18px;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  line-height: 1.2;
+  display: inline-block;
+  float: left;
+}
+
+.news-addition-info {
+  margin-left: 15%;
+}
+      
+/*News/blog panel end*/
