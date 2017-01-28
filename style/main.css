@@ -133,6 +133,8 @@
 
 /*Button with user menu end*/
 
+/*Dashboard start*/
+
 .dashboard {
   border: solid 1px #d8d8d8;
   margin-top: 15px;
@@ -153,21 +155,22 @@
   margin: 0 0 0 45px;
   font-size: 18px;
 }
+
 .close-news {
   float: right;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    outline: none;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
 }
 
 .dashboard-menu-wrapper {
   margin-left: 10px;
-  }
+}
 
 .dashboard-paragraph {
   margin: 10px 0 10px 45px;
-  }
+}
 
 .dashboard-menu-list {
   margin-left: 20px; 
@@ -175,26 +178,17 @@
 
 .inset-picture {
   float: right;
-    margin-bottom: 15px;
-    margin-left: 20px;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }
-
 
 .news-list-item {
   margin-bottom: 10px;
 }
 
+/*Dashboard end*/
 
-
-
-
-
-
-
-
-
-
-
+/*Forked repo start*/
 
 .panel.panel-default {
   border: none;
@@ -219,14 +213,12 @@
 }
 
 .forked-date {
-  color: grey;
+  color: #BBBBBB;
 }
 
+/*Forked repo end*/
 
-
-
-
-
+/*Information part start*/
 
 .textinfo {
   text-align: center;
@@ -249,3 +241,7 @@
 .link-wrapper {
   margin-top: 15px;
 }
+
+/*Information part end*/
+
+
