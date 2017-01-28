@@ -37,21 +37,21 @@
             <!-- Navigation links start -->
             <ul class="nav navbar-nav">
               <li>
-                <a href="https://github.com/pulls" class="nav-link">Pull requests</a>
+                <a href="https://github.com/pulls" class="nav-link hover-item">Pull requests</a>
               </li>
               <li>
-                <a href="https://github.com/issues" class="nav-link">Issues</a>
+                <a href="https://github.com/issues" class="nav-link hover-item">Issues</a>
               </li>
               <li>
-                <a href="https://gist.github.com/" class="nav-link">Gist</a>
+                <a href="https://gist.github.com/" class="nav-link hover-item">Gist</a>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle plus-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="dropdown-toggle plus-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="hover-item">
                   <span>+</span><span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu caret-menu">
                   <li>
                     <a href="https://github.com/new">New repository</a>
                   </li>
@@ -67,11 +67,11 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="hover-item">
                   <img src="https://robohash.org/#.png" class="avatar"> 
                   <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu caret-menu">
                   <li class="dropdown-header"><span class="dropdown-header-item">Signed in as </span>
                     <span class="dropdown-header-item menu-user-name"></span>
                   </li>
@@ -117,9 +117,10 @@
                 <span class="menu-user-name content"></span>
                 <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-                <div class="dropdown-header-item">asdas
-                <button>X</button>
+              <ul class="dropdown-menu user-menu" aria-labelledby="dropdownMenuDivider">
+                <div class="dropdown-menu-header clearfix">
+                  Switch dashboard context
+                  <button class="close-news">&#10006;</button>
                 </div>
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -131,14 +132,17 @@
             <!-- User dropdown end -->
             <!-- Dashboard start -->
             <div class="dashboard">
+            <div class="icon-button-dashboard-wrapper clearfix">
               <img alt="support" src="img/support.png" class="support-icon">
               <button class="close-news">X</button>
+              
+            </div>
               <div class="dashboard-menu-wrapper">
                 <h2 class="dashboard-header">You’ve been added to the cursor-education organization!</h2>
                 <p class="dashboard-paragraph">Here are some quick tips for a first-time organization member.</p>
                 <ul class="dashboard-menu-list">
                   <li class="news-list-item">
-                  <div class="inset-figure">
+                  <div class="inset-picture">
                     <img alt="" height="32" src="https://assets-cdn.github.com/images/modules/notices/context_button.png" width="105">
                   </div>
                   Use the switch context button in the upper left corner of this page to switch between your personal context <span class="menu-user-name content"></span> and organizations you are a member of.
@@ -184,12 +188,12 @@
               <p>
                 <span class="bold-text">ProTip!</span> Edit your feed by updating the users you <a href="#" class="text-link">follow</a> and repositories you <a class="text-link">watch</a>.
               </p>
-              <!-- <div class="subscribe-link-container"> -->
+              <div class="link-wrapper">
                 <a href="#" class="subscribe-link-news">
                   <img src="img/subscribe-symbol.jpg" alt="subscribe-symbol" class="subscribe-symbol">
                   Subscribe to <span class="bold-text">your</span> news feed
                 </a>
-              <!-- </div> -->
+              </div>
             </div>
             <!-- Text info end -->
           </div>

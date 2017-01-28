@@ -52,4 +52,19 @@
       return new Date( start.getTime() + Math.random() * (end.getTime() - start.getTime()) );
     }
   })();
+
+
+
+
+
+  (function () {
+    var $switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news');
+    $($switchDahboardContent).on('click', function () {
+      alert('Switch dashboard context');
+    });
+      
+  })();
+
+
+
 })();
