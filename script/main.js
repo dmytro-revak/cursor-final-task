@@ -60,7 +60,6 @@
 
   // Creates and set random date to forked panel
   function setRandomDate() {
-    var datesList = [];
     for (var i = 0; i < 4; i++) {
       var date = randomDate( new Date(2016 - i, 0, 1), new Date(2017 - i, 0, 1) );
       date = moment(date).format('Do MMM YYYY');
@@ -120,54 +119,31 @@
         $(this).css('pointer-events', 'none');
         $(this).addClass('check-button');
 
-        // debugger
+        // Save current press button value and show repo to need
         var buttonName = $(this).text();
         removeAnchekedRepoItem(buttonName);
       });
     });
 
-
-        function removeAnchekedRepoItem(buttonName) {
-          var repositoriesItem = $('.repositories-item');
-          $(repositoriesItem).each(function () {
-            $(this).css('display', 'none');
-          });
-          // $(repositoriesItem).each(function getItemParameters() {
-          //   var currentItemParameters = $(this).attr('data-class');
-          //   itemParameters.push(currentItemParameters);
-          // });
-
-          $(repositoriesItem).each(function (indexOfElement, itemElement) {
-            // debugger
-            var currentItemParameters = $(this).attr('data-class');
-            currentItemParameters = currentItemParameters.split(', ');
-            for (i = 0; i < currentItemParameters.length; i++) {
-              // debugger
-              if (buttonName === currentItemParameters[i]) {
-                $(itemElement).css('display', 'block');
-                console.log(1);
-              }
-            }
+    // Checkes which button user have pressed and show repo to need
+    function removeAnchekedRepoItem(buttonName) {
+      // Get all panel item
+      var repositoriesItem = $('.repositories-item');
+      // Hide all of them
+      $(repositoriesItem).each(function () {
+        $(this).css('display', 'none');
+      });
+      $(repositoriesItem).each(function (indexOfElement, itemElement) {
+        // Get each item parameters
+        var currentItemParameters = $(this).attr('data-class');
+        currentItemParameters = currentItemParameters.split(', ');
+        // Do item visible when need button has pressed
+        for (i = 0; i < currentItemParameters.length; i++) {
+          if (buttonName === currentItemParameters[i]) {
+            $(itemElement).css('display', 'block');
           }
-            // $(currentItemParameters).each(function (index, element) {
-
-          );
-          
         }
-
-        // debugger
-     //
-
-
-
-      //       $(this).css('display', 'block');
-      //     });
-      //   var buttonValue = $(this).text();
-      //   $(repositoriesItem[repoNumber]).css('display', 'none');
-    // //////////////////////////
-
+      });
     }
-
-
-
+  }
 })();
