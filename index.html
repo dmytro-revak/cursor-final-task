@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub</title>
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -28,7 +29,7 @@
             </div>
             <!-- Logo end -->
             <!-- Search field start -->
-            <form class="navbar-form navbar-left search-field">
+            <form class="navbar-form navbar-left">
               <div class="form-group">
                 <input type="text" class="form-control search-input" placeholder="Search GitHub">
               </div>
@@ -124,14 +125,14 @@
                 </li>
                 <li class="check-item">
                   <a href="index.html">
-                    <span class="check-sumbol">&#x2714;</span>
+                    <img src="img/check-symbol.png" class="check-sumbol">
                     <img src="https://robohash.org/#.png" alt="content-avatar" class="content-avatar">
                     <span class="menu-user-name content"></span>
                   </a>
                 </li>
                 <li class="check-item">
                   <a href="https://github.com/orgs/cursor-education/dashboard">
-                    <span class="check-sumbol hidden-symbol">&#x2714;</span>
+                    <img src="img/check-symbol.png" class="check-sumbol hidden-symbol">
                     <img src="img/logo-cursor.png" alt="cursor-logo" class="menu-logo">
                     <span>cursor-education</span>
                   </a>
@@ -206,11 +207,12 @@
             <!-- Text info start -->
             <div class="textinfo">
               <p>
+                <img src="img/lamp.png" alt="subscribe-symbol" class="textinfo-symbol">
                 <span class="bold-text">ProTip!</span> Edit your feed by updating the users you <a href="#" class="text-link">follow</a> and repositories you <a class="text-link">watch</a>.
               </p>
               <div class="link-wrapper">
                 <a href="#" class="subscribe-link-news">
-                  <img src="img/subscribe-symbol.jpg" alt="subscribe-symbol" class="subscribe-symbol">
+                  <img src="img/subscribe-symbol.jpg" alt="subscribe-symbol" class="textinfo-symbol">
                   Subscribe to <span class="bold-text">your</span> news feed
                 </a>
               </div>
@@ -325,7 +327,8 @@
       <div class="container">
         <div class="footer">
           <div class="footer-content clearfix">
-            <div class="left-footer-links-container footer-links-wrap">
+          <!-- left-footer-links-container -->
+            <div class="footer-links-wrap left-wrap col-lg-5 col-sm-12">
               <span class="year">&#169; 2017 GitHub, Inc.</span>
               <a href="https://help.github.com/articles/github-terms-of-service/" class="footer-links text-link">Terms</a>
               <a href="https://help.github.com/articles/github-privacy-statement/" class="footer-links text-link">Privacy</a>
@@ -333,12 +336,12 @@
               <a href="https://status.github.com/" class="footer-links text-link">Status</a>
               <a href="https://help.github.com/" class="footer-links text-link">Help</a>
             </div>
-            <div class="footer-logo">
+            <div class="footer-logo col-lg-2 col-sm-12">
               <a href="index.html" class="footer-logo-link">
                 <img src="img/github-mark-grey.png" alt="footer-logo" class="footer-logo-picture">
               </a>
             </div>
-            <div class="right-footer-links-container footer-links-wrap">
+            <div class="footer-links-wrap right-wrap col-lg-5 col-sm-12">
               <a href="https://github.com/contact" class="footer-links text-link">Contact GitHub</a>
               <a href="https://developer.github.com/" class="footer-links text-link">API</a>
               <a href="https://services.github.com/" class="footer-links text-link">Training</a>

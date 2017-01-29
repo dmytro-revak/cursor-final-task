@@ -100,7 +100,7 @@
 }
 
 .dropdown-menu.user-menu {
-  width: 35%;
+  width: 260px;
   padding-top: 0;
 }
 
@@ -119,7 +119,8 @@
 
 .check-sumbol {
   display: inline-block;
-  width: 12px;
+  width: 20px;
+  margin: -4px;
 }
 
 .hidden-symbol {
@@ -229,8 +230,8 @@
   margin-top: 30px;
 }
 
-.subscribe-symbol {
-  width: 15px;
+.textinfo-symbol {
+  width: 17px;
 }
 
 .bold-text {
@@ -252,7 +253,7 @@
 /*News/blog panel start*/
 
 .news-content {
-  padding: 10px 10px 10px 10px;
+  padding: 10px 14px 10px 10px;
   border: solid 1px #4078c0;
   border-radius: 3px;
 }
@@ -352,6 +353,7 @@
   padding: 3px 10px;
   font-size: 12px;
   line-height: 20px;
+  background-color: #6cc644;
   background-image: linear-gradient(#91dd70, #55ae2e);
   border: 1px solid #5aad35;
   border-radius: 3px;
@@ -363,7 +365,9 @@
 .new-repository-link:hover {
   text-decoration: none;
   color: white;
-  background: #D26911;
+  background-color: #55a532;
+  background-image: linear-gradient(#85d063, #4f992f);
+  border-color: #519d30;
 }
 
 .form-control {
@@ -391,7 +395,6 @@
 
 .repository-button:hover {
   border-bottom: 2px solid #E5E5E5;
-  color: #58B031;
 }
 
 .check-button {
@@ -414,21 +417,20 @@
   font-size: 12px;
 }
 
-.left-footer-links-container {
-  width: 45%;
-  float: left;
+.left-wrap {
+  padding: 0px;
+  margin-bottom: 5px;
 }
 
-.right-footer-links-container {
+.right-wrap {
+  padding: 0px;
   text-align: right;
-  float: right;
-  width: 45%;
 }
 
 .footer-logo {
   display: inline-block;
   text-align: center;
-  width: 10%;
+  margin-bottom: 5px;
 }
 
 .footer-logo-picture {
@@ -436,7 +438,7 @@
 }
 
 .footer-links-wrap * {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 /*Footer end*/

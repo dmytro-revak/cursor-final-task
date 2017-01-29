@@ -9,6 +9,7 @@
   setRandomDate();
   setRepoAndContributeAmount();
   setFunctionsOnTheButtons();
+  setResizeForFooter();
 
 
   // Genetare and set avatar for personal IP
@@ -103,6 +104,7 @@
 
     // Remove news panel from the page
     $(newsInformationClose).on('click', function () {
+      alert('You close messages panel');
       $('.news-content').css('display', 'none');
     });
 
@@ -144,6 +146,24 @@
           }
         }
       });
+    }
+  }
+
+  // Set and change footer text align 
+  function setResizeForFooter() {
+    // Set default text align
+    changeFooterTxtAlign();
+    // Add resize event hendler
+    $(window).resize(function () {
+      changeFooterTxtAlign();
+    });
+    // Changes footer text align when user change the screen width
+    function changeFooterTxtAlign() {
+      if (screen.width < 800) {
+        $('.right-wrap').css('text-align', 'left');
+      } else {
+        $('.right-wrap').css('text-align', 'right');
+      }
     }
   }
 })();
