@@ -14,8 +14,13 @@
 
   // Genetare and set avatar for personal IP
   function setAvatar() {
-    $('.avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
-    $('.content-avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
+    var headerAvatar = $('.avatar'),
+        dropdownButtonAvatar = $('.content-avatar'),
+        userPageMainAvatar = $('.user-avatar-picture');
+    var avatars = [headerAvatar, dropdownButtonAvatar, userPageMainAvatar];
+    $(avatars).each(function () {
+      $(this).attr('src', 'https://robohash.org/' + userIp + '.png');
+    });
   }
 
   // Set user IP in name field in menu
