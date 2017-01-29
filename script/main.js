@@ -11,12 +11,22 @@
     $('.menu-user-name').text(userIp);
   })();
 
-  // Change logo when user hover it
+  // Change main-logo when user hover it
   (function changeLogo() {
     $('.logo').hover(function() {
         $(this).attr("src", "img/github-mark-blue.png");
       }, function(){
         $(this).attr("src", "img/github-mark.png");
+      }
+    );
+  })();
+
+  // Change footer-logo when user hover it
+  (function changeFooterLogo() {
+    $('.footer-logo-picture').hover(function() {
+        $(this).attr("src", "img/github-mark-grey.png");
+      }, function(){
+        $(this).attr("src", "img/github-mark-dark-grey.png");
       }
     );
   })();
@@ -53,19 +63,23 @@
     }
   })();
 
-// Set amount of contribute repositories
-(function setContributeAmount() {
-  var contributeItemAmount = $('.panel-item');
-  var contributeAmount = contributeItemAmount.length;
-  $('.contribute-amount').text(contributeAmount);
-})();
+  // Set amount of contribute and total repositories
+  (function setRepoAndContributeAmount() {
+    var contributeItemAmount = $('.panel-item-contr');
+    var repoItemAmount = $('.panel-item-repo');
+    var contributeAmount = contributeItemAmount.length;
+    var repositoriesAmount = repoItemAmount.length;
+    $('.contribute-amount').text(contributeAmount);
+    $('.repo-amount').text(repositoriesAmount);
+  })();
 
 
 
   (function setFunctionsOnTheButtons() {
     var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
         dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news'),
-        newsInformationClose = $('.no-gutter .close-news');
+        newsInformationClose = $('.no-gutter .close-news'),
+        repositoriesNavigationButtons = $('.repository-button');
     
     $(switchDahboardContent).on('click', function () {
       // setRandomDate();
@@ -76,8 +90,27 @@
       $('.dashboard').css('display', 'none');
     });
 
-   $(newsInformationClose).on('click', function () {
+    $(newsInformationClose).on('click', function () {
       $('.news-content').css('display', 'none');
+    });
+
+    $(repositoriesNavigationButtons).each(function () {
+      var repositoriesItem = $('.repositories-item');
+      $(this).on('click', function () {
+          $(repositoriesItem).each(function () {
+            $(this).css('display', 'block');
+          });
+        $(repositoriesNavigationButtons).each(function () {
+          $(this).removeClass('check-button');
+          $(this).css('pointer-events', 'auto');
+        });
+        $(this).css('pointer-events', 'none');
+        $(this).addClass('check-button');
+        var repoNumber = repositoriesItem.index(this);
+        // debugger
+        // todo  !!!!!!!!!!!!!!!!!!!!!!!!!
+        $(repositoriesItem[repoNumber]).css('display', 'none');
+      });
     });
 
   })();

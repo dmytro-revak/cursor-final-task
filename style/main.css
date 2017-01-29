@@ -304,6 +304,11 @@
   border-radius: 3px 3px 0 0;
 }
 
+.panel-heading-text {
+  margin-top: 5px;
+  display: inline-block;
+}
+
 .panel-item {
   color: #666;
   background: #fff;
@@ -324,7 +329,7 @@
   float: right;
 }
 
-.contribute-amount {
+.total-amount {
   margin-left: 5px;
   padding: 2px 5px;
   font-size: 12px;
@@ -336,3 +341,102 @@
 }
 
 /*Contributes repositories end*/
+
+/*Repositories panel start*/
+
+.repositories-navigation {
+  padding: 10px 10px 0 10px;
+  text-align: center;
+}
+
+.new-repository-link { 
+  padding: 3px 10px;
+  font-size: 12px;
+  line-height: 20px;
+  background-image: linear-gradient(#91dd70, #55ae2e);
+  border: 1px solid #5aad35;
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  float: right;
+}
+
+.new-repository-link:hover {
+  text-decoration: none;
+  color: white;
+  background: #D26911;
+}
+
+.form-control {
+  margin-bottom: 5px;
+}
+
+.repositories-buttons {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.repositories-buttons-item {
+  display: inline-block;
+}
+
+.repository-button {
+  padding: 5px 5px 0px;
+  margin-right: 5px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  outline: none;
+}
+
+.repository-button:hover {
+  border-bottom: 2px solid #E5E5E5;
+  color: #58B031;
+}
+
+.check-button {
+  border-bottom: 2px solid #D26911;
+  color: #58B031;
+}
+
+
+/*Repositories panel end*/
+
+/* Main content style start */
+
+/*Footer start*/
+
+.footer {
+  margin-top: 40px;
+  padding: 40px 0;
+  color: #767676;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+}
+
+.left-footer-links-container {
+  width: 45%;
+  float: left;
+}
+
+.right-footer-links-container {
+  text-align: right;
+  float: right;
+  width: 45%;
+}
+
+.footer-logo {
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+}
+
+.footer-logo-picture {
+  width: 24px;
+}
+
+.footer-links-wrap * {
+  margin: 0 10px;
+}
+
+/*Footer end*/

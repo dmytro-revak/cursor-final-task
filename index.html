@@ -23,7 +23,7 @@
             <!-- Logo start-->
             <div class="navbar-header logo-container">
               <a href="index.html">
-                <img src="img/github-mark.png" class="logo">
+                <img src="img/github-mark.png" alt="logo" class="logo">
               </a>
             </div>
             <!-- Logo end -->
@@ -48,7 +48,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle plus-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="hover-item">
+                <a href="#" class="dropdown-toggle plus-caret hover-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span>+</span><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu caret-menu">
@@ -245,9 +245,9 @@
                 <span class="panel-heading-text">
                   Repositories you contribute to 
                 </span>
-                <span class="contribute-amount"></span>
+                <span class="contribute-amount total-amount"></span>
               </div>
-              <div class="panel-body panel-item clearfix">
+              <div class="panel-body panel-item-contr panel-item clearfix">
                 <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
                 <a href="index.html" class="menu-user-name text-link"></a>/
                 <a href="#" class="text-link">First repository</a>
@@ -256,7 +256,7 @@
                   <span class="repository-stars">&#9733;</span>
                 </div>
               </div>
-              <div class="panel-body panel-item clearfix">
+              <div class="panel-body panel-item-contr panel-item clearfix">
                 <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
                 <a href="index.html" class="menu-user-name text-link"></a>/
                 <a href="#" class="text-link">Second repository</a>
@@ -265,7 +265,7 @@
                   <span class="repository-stars">&#9733;</span>
                 </div>
               </div>
-              <div class="panel-body panel-item clearfix">
+              <div class="panel-body panel-item-contr panel-item clearfix">
                 <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
                 <a href="index.html" class="menu-user-name text-link"></a>/
                 <a href="#" class="text-link">Third repository</a>
@@ -276,11 +276,80 @@
               </div>
             </div>
             <!-- Contributes repositories end -->
+            <!-- Repositories panel start -->
+            <div class="panel panel-default border">
+              <div class="panel-heading clearfix">
+                <span class="panel-heading-text">
+                  Your repositories  
+                </span>
+                <span class="repo-amount total-amount"></span>
+                <a href="https://github.com/new" class="new-repository-link">New repository</a>
+              </div>
+              <div class="panel-body panel-item repositories-navigation">
+                <input type="text" class="form-control" placeholder="Find a repository…">
+                <ui class="repositories-buttons">
+                  <li class="repositories-buttons-item"><button class="repository-button check-button">All</button></li>
+                  <li class="repositories-buttons-item"><button class="repository-button">Public</button></li>
+                  <li class="repositories-buttons-item"><button class="repository-button">Private</button></li>
+                  <li class="repositories-buttons-item"><button class="repository-button">Sourses</button></li>
+                  <li class="repositories-buttons-item"><button class="repository-button">Forks</button></li>
+                </ui>
+              </div>
+              <div class="panel-body panel-item panel-item-repo clearfix repositories-item" data-class="publick">
+                <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
+                <a href="#" class="text-link">First repository</a>
+              </div>
+              <div class="panel-body panel-item panel-item-repo clearfix repositories-item" data-class="private">
+                <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
+                <a href="#" class="text-link">Second repository</a>
+              </div>
+              <div class="panel-body panel-item panel-item-repo clearfix repositories-item" data-class="publick">
+                <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
+                <a href="#" class="text-link">Third repository</a>
+              </div>
+              <div class="panel-body panel-item panel-item-repo clearfix repositories-item" data-class="publick">
+                <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
+                <a href="#" class="text-link">Fourth repository</a>
+              </div>
+              <div class="panel-body panel-item panel-item-repo clearfix repositories-item" data-class="publick">
+                <img src="img/contribute-logo.png" alt="contribute-logo" class="contribute-logo">
+                <a href="#" class="text-link">Fifth repository</a>
+              </div>
+            </div>
+            <!-- Repositories panel end -->
           </div>
         </div>
-        
       </div> 
       <!-- Main content end -->
+      <!-- Footer start -->
+      <div class="container">
+        <div class="footer">
+          <div class="footer-content clearfix">
+            <div class="left-footer-links-container footer-links-wrap">
+              <span class="year">&#169; 2017 GitHub, Inc.</span>
+              <a href="https://help.github.com/articles/github-terms-of-service/" class="footer-links text-link">Terms</a>
+              <a href="https://help.github.com/articles/github-privacy-statement/" class="footer-links text-link">Privacy</a>
+              <a href="https://help.github.com/articles/github-security/" class="footer-links text-link">Security</a>
+              <a href="https://status.github.com/" class="footer-links text-link">Status</a>
+              <a href="https://help.github.com/" class="footer-links text-link">Help</a>
+            </div>
+            <div class="footer-logo">
+              <a href="index.html" class="footer-logo-link">
+                <img src="img/github-mark-grey.png" class="footer-logo-picture">
+              </a>
+            </div>
+            <div class="right-footer-links-container footer-links-wrap">
+              <a href="https://github.com/contact" class="footer-links text-link">Contact GitHub</a>
+              <a href="https://developer.github.com/" class="footer-links text-link">API</a>
+              <a href="https://services.github.com/" class="footer-links text-link">Training</a>
+              <a href="https://github.myshopify.com/" class="footer-links text-link">Shop</a>
+              <a href="https://github.com/blog" class="footer-links text-link">Blog</a>
+              <a href="https://github.com/about" class="footer-links text-link">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer end -->
     </div>
     
 
