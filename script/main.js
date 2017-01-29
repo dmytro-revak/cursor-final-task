@@ -107,27 +107,66 @@
       $('.news-content').css('display', 'none');
     });
 
-    // 
+    // Change buttons on user repositories panel
     $(repositoriesNavigationButtons).each(function () {
-      var repositoriesItem = $('.repositories-item');
+      // Add onclick event for each button
       $(this).on('click', function () {
-          $(repositoriesItem).each(function () {
-            $(this).css('display', 'block');
-          });
+        // Reset previously checked styles 
         $(repositoriesNavigationButtons).each(function () {
           $(this).removeClass('check-button');
           $(this).css('pointer-events', 'auto');
         });
+        // And checked styles for press button
         $(this).css('pointer-events', 'none');
         $(this).addClass('check-button');
-        var repoNumber = repositoriesItem.index(this);
+
         // debugger
-        // todo  !!!!!!!!!!!!!!!!!!!!!!!!!
-        $(repositoriesItem[repoNumber]).css('display', 'none');
+        var buttonName = $(this).text();
+        removeAnchekedRepoItem(buttonName);
       });
     });
 
-  }
+
+        function removeAnchekedRepoItem(buttonName) {
+          var repositoriesItem = $('.repositories-item');
+          $(repositoriesItem).each(function () {
+            $(this).css('display', 'none');
+          });
+          // $(repositoriesItem).each(function getItemParameters() {
+          //   var currentItemParameters = $(this).attr('data-class');
+          //   itemParameters.push(currentItemParameters);
+          // });
+
+          $(repositoriesItem).each(function (indexOfElement, itemElement) {
+            // debugger
+            var currentItemParameters = $(this).attr('data-class');
+            currentItemParameters = currentItemParameters.split(', ');
+            for (i = 0; i < currentItemParameters.length; i++) {
+              // debugger
+              if (buttonName === currentItemParameters[i]) {
+                $(itemElement).css('display', 'block');
+                console.log(1);
+              }
+            }
+          }
+            // $(currentItemParameters).each(function (index, element) {
+
+          );
+          
+        }
+
+        // debugger
+     //
+
+
+
+      //       $(this).css('display', 'block');
+      //     });
+      //   var buttonValue = $(this).text();
+      //   $(repositoriesItem[repoNumber]).css('display', 'none');
+    // //////////////////////////
+
+    }
 
 
 
