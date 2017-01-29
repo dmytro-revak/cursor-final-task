@@ -1,54 +1,65 @@
 (function implemetGitHubPage() {
 
+  setAvatar();
+  setUserNameForMenu();
+  changeLogo();
+  changeFooterLogo();
+  setActiveItem();
+  implementSearching();
+  setRandomDate();
+  setRepoAndContributeAmount();
+  setFunctionsOnTheButtons();
+
+
   // Genetare and set avatar for personal IP
-  (function setAvatar() {
+  function setAvatar() {
     $('.avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
     $('.content-avatar').attr('src', 'https://robohash.org/' + userIp + '.png');
-  })();
+  }
 
   // Set user IP in name field in menu
-  (function setUserNameForMenu() {
+  function setUserNameForMenu() {
     $('.menu-user-name').text(userIp);
-  })();
+  }
 
   // Change main-logo when user hover it
-  (function changeLogo() {
+  function changeLogo() {
     $('.logo').hover(function() {
         $(this).attr("src", "img/github-mark-blue.png");
       }, function(){
         $(this).attr("src", "img/github-mark.png");
       }
     );
-  })();
+  }
 
   // Change footer-logo when user hover it
-  (function changeFooterLogo() {
+  function changeFooterLogo() {
     $('.footer-logo-picture').hover(function() {
         $(this).attr("src", "img/github-mark-grey.png");
       }, function(){
         $(this).attr("src", "img/github-mark-dark-grey.png");
       }
     );
-  })();
+  }
   
   // Set blue color to active list item 
-  (function setActiveItem() {
+  function setActiveItem() {
     $('.dropdown-menu li').hover(function () {
       $(this).toggleClass('active');
     });
-  })();
+  }
 
   // Redirect user on tru github search page after form submit 
-  (function implementSearching() {
+  function implementSearching() {
     $('.search-field').submit( function(event) {
       event.preventDefault();
       var searchInfo = $('.search-input').val();
       window.location.href = ("https://github.com/search?utf8=✓&q=" + searchInfo + "&type=Repositories&ref=searchresults");
     });
-  })();
+  }
 
   // Creates and set random date to forked panel
-  (function setRandomDate() {
+  function setRandomDate() {
     var datesList = [];
     for (var i = 0; i < 4; i++) {
       var date = randomDate( new Date(2016 - i, 0, 1), new Date(2017 - i, 0, 1) );
@@ -61,39 +72,42 @@
     function randomDate(start, end) {
       return new Date( start.getTime() + Math.random() * (end.getTime() - start.getTime()) );
     }
-  })();
+  }
 
   // Set amount of contribute and total repositories
-  (function setRepoAndContributeAmount() {
+  function setRepoAndContributeAmount() {
     var contributeItemAmount = $('.panel-item-contr');
     var repoItemAmount = $('.panel-item-repo');
     var contributeAmount = contributeItemAmount.length;
     var repositoriesAmount = repoItemAmount.length;
     $('.contribute-amount').text(contributeAmount);
     $('.repo-amount').text(repositoriesAmount);
-  })();
+  }
 
-
-
-  (function setFunctionsOnTheButtons() {
+  // Set difference function for each button
+  function setFunctionsOnTheButtons() {
     var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
         dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news'),
         newsInformationClose = $('.no-gutter .close-news'),
         repositoriesNavigationButtons = $('.repository-button');
     
+    // Change dashboard content and notice user about that
     $(switchDahboardContent).on('click', function () {
-      // setRandomDate();
+      setRandomDate();
       alert('Switch dashboard content');
     });
 
+    // Remove dashboard from the page
     $(dashboardCloseButton).on('click', function () {
       $('.dashboard').css('display', 'none');
     });
 
+    // Remove news panel from the page
     $(newsInformationClose).on('click', function () {
       $('.news-content').css('display', 'none');
     });
 
+    // 
     $(repositoriesNavigationButtons).each(function () {
       var repositoriesItem = $('.repositories-item');
       $(this).on('click', function () {
@@ -113,21 +127,7 @@
       });
     });
 
-  })();
-    
-    
-
-    // (function setCheckedSymbol() {
-    //   var checkedSymbols = $('.check-item');
-    //   $(checkedSymbols).each(function () {
-    //   debugger
-    //     $(this).on('click', function () {
-    //       $($(this) > '.check-sumbol').toggleClass('.hidden-symbol');
-    //     }); 
-    //   });
-    // })();
-      
-    // todo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  }
 
 
 
