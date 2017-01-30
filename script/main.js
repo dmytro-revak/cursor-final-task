@@ -10,6 +10,7 @@
   setRepoAndContributeAmount();
   setFunctionsOnTheButtons();
   setResizeForFooter();
+  setPageName();
 
 
   // Genetare and set avatar for personal IP
@@ -172,34 +173,43 @@
     }
   }
 
-
-
-
-
-
-  // Set orange border to active user repo navigation item 
-  function setActiveUserNavItem(buttonName) {
-      // Get all panel item
-      var repositoriesItem = $('.repositories-item');
-      // Hide all of them
-      $(repositoriesItem).each(function () {
-        $(this).css('display', 'none');
-      });
-      $(repositoriesItem).each(function (indexOfElement, itemElement) {
-        // Get each item parameters
-        var currentItemParameters = $(this).attr('data-class');
-        currentItemParameters = currentItemParameters.split(', ');
-        // Do item visible when need button has pressed
-        for (i = 0; i < currentItemParameters.length; i++) {
-          if (buttonName === currentItemParameters[i]) {
-            $(itemElement).css('display', 'block');
-          }
-        }
-      });
+  // Set the certain name for user-profile page 
+  function setPageName() {
+    var pageName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    if (pageName === 'user-page.html') {
+      document.title = userIp;
     }
+  }
 
 
 
+
+
+
+  // // Set orange border to active user repo navigation item 
+  // function setActiveUserNavItem(buttonName) {
+  //     $(repositoriesNavigationButtons).each(function () {
+  //     // Add onclick event for each button
+  //     $(this).on('click', function () {
+  //       // Reset previously checked styles 
+  //       $(repositoriesNavigationButtons).each(function () {
+  //         $(this).removeClass('check-button');
+  //         $(this).css('pointer-events', 'auto');
+  //       });
+  //       // And checked styles for press button
+  //       $(this).css('pointer-events', 'none');
+  //       $(this).addClass('check-button');
+
+  //       // Save current press button value and show repo to need
+  //       var buttonName = $(this).text();
+  //       removeAnchekedRepoItem(buttonName);
+  //     });
+  //   }
+
+
+function function_name(argument) {
+  
+}
 
 
 

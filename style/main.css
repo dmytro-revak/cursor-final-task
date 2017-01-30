@@ -546,6 +546,90 @@ div ul li .user-repo-nav-link {
   
 /*user repo navigation end*/
 
+/*user repositories panel start*/
+
+.repositories-panel {
+  margin-bottom: 24px;
+}
+
+.repositories-panel-title {
+  margin-top: 30px;
+}
+
+.repositories-panel-main-heading {
+  font-weight: normal;
+  float: left;
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+.repositories-panel-customize-heading {
+  float: right;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.repositories-panel-title-link {
+  color: #767676;
+}
+
+.repositories-panel-title-link:hover {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.repositories-tables-list {
+  list-style: none;
+  padding: 0;
+}
+
+.repositories-tables-item {
+  display: flex;
+}
+
+.repositories-tables-item-content {
+  width: 418px;
+  display: inline-block;
+  border: 1px #ddd solid;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #767676;
+}
+
+.first-in-row {
+  margin-right: 10px;
+}
+
+.repo-item-header {
+  font-weight: bold;
+  color: #4078c0;
+  font-size: 16px;
+}
+.repo-item-header a {
+  color: #337ab7;
+}
+
+.repo-item-ongoing {
+  margin-bottom: 8px;
+}
+
+.repo-item-description {
+  margin: 8px 0 16px 0;
+}
+
+.language-logo {
+  width: 12px;
+  height: 12px;
+  background-color: violet;
+  border-radius: 50%;
+  display: inline-block;
+}
+/*user repositories panel end*/
+
 
 
 /*all main user content end */
