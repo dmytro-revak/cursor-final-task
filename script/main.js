@@ -171,4 +171,36 @@
       }
     }
   }
+
+
+
+
+
+
+  // Set orange border to active user repo navigation item 
+  function setActiveUserNavItem(buttonName) {
+      // Get all panel item
+      var repositoriesItem = $('.repositories-item');
+      // Hide all of them
+      $(repositoriesItem).each(function () {
+        $(this).css('display', 'none');
+      });
+      $(repositoriesItem).each(function (indexOfElement, itemElement) {
+        // Get each item parameters
+        var currentItemParameters = $(this).attr('data-class');
+        currentItemParameters = currentItemParameters.split(', ');
+        // Do item visible when need button has pressed
+        for (i = 0; i < currentItemParameters.length; i++) {
+          if (buttonName === currentItemParameters[i]) {
+            $(itemElement).css('display', 'block');
+          }
+        }
+      });
+    }
+
+
+
+
+
+
 })();

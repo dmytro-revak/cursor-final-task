@@ -399,7 +399,6 @@
 
 .check-button {
   border-bottom: 2px solid #D26911;
-  color: #58B031;
 }
 
 
@@ -496,6 +495,57 @@
   font-weight: bold;
 }
 
+/*user-information start*/
+
+
+/*all main user content start */
+
+.all-user-main-content.col-lg-9 {
+  padding-right: 0px;
+}
+
+/*user repo navigation start*/
+
+.user-page-repo-nav {
+  border-bottom: solid 1px #ddd;
+}
+
+.total-amount.user-amount-info {
+  color: #666;
+  background-color: #eee
+}
+
+.user-repo-nav-link.active-link {
+  color: #333;
+  border-bottom-color: #c9510c;
+  border-radius: 0px;
+}
+
+.user-repo-nav-link.active-link:focus, .user-repo-nav-link.active-link:hover {
+  background-color: transparent;
+}
+
+div ul li .user-repo-nav-link {
+  border-radius: 0px;
+  display: table-cell;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #767676;
+  vertical-align: middle;
+  border-bottom: 2px solid transparent; 
+}
+
+.nav.nav-pills .user-repo-nav-link:focus {
+  background-color: transparent;
+} 
+
+.nav.nav-pills .user-repo-nav-link:hover {
+  color: #333;
+  background-color: transparent;
+}
+  
+/*user repo navigation end*/
 
 
 
+/*all main user content end */
