@@ -95,7 +95,8 @@
     var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
         dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news'),
         newsInformationClose = $('.no-gutter .close-news'),
-        repositoriesNavigationButtons = $('.repository-button');
+        repositoriesNavigationButtons = $('.repository-button'),
+        userRepoNavigationButtons = $('.user-repo-nav-link');
     
     // Change dashboard content and notice user about that
     $(switchDahboardContent).on('click', function () {
@@ -118,18 +119,17 @@
     $(repositoriesNavigationButtons).each(function () {
       // Add onclick event for each button
       $(this).on('click', function () {
-        // Reset previously checked styles 
-        $(repositoriesNavigationButtons).each(function () {
-          $(this).removeClass('check-button');
-          $(this).css('pointer-events', 'auto');
-        });
-        // And checked styles for press button
-        $(this).css('pointer-events', 'none');
-        $(this).addClass('check-button');
-
+        changeButtonStyleForClick(this, repositoriesNavigationButtons, 'check-button');
         // Save current press button value and show repo to need
         var buttonName = $(this).text();
         removeAnchekedRepoItem(buttonName);
+      });
+    });
+
+    // Add changeButtoStyle function for user repositories navigation buttons
+    $(userRepoNavigationButtons).each(function () {
+      $(this).on('click', function () {
+        changeButtonStyleForClick(this, userRepoNavigationButtons, 'active-link');        
       });
     });
 
@@ -181,36 +181,17 @@
     }
   }
 
-
-
-
-
-
-  // // Set orange border to active user repo navigation item 
-  // function setActiveUserNavItem(buttonName) {
-  //     $(repositoriesNavigationButtons).each(function () {
-  //     // Add onclick event for each button
-  //     $(this).on('click', function () {
-  //       // Reset previously checked styles 
-  //       $(repositoriesNavigationButtons).each(function () {
-  //         $(this).removeClass('check-button');
-  //         $(this).css('pointer-events', 'auto');
-  //       });
-  //       // And checked styles for press button
-  //       $(this).css('pointer-events', 'none');
-  //       $(this).addClass('check-button');
-
-  //       // Save current press button value and show repo to need
-  //       var buttonName = $(this).text();
-  //       removeAnchekedRepoItem(buttonName);
-  //     });
-  //   }
-
-
-function function_name(argument) {
-  
-}
-
+  // Add curtain style class for certain button from buttons
+  function changeButtonStyleForClick(clickedItem, buttonsArray, className) {
+    // Remove cheked class from all buttons
+    $(buttonsArray).each(function () {
+      $(this).removeClass(className);
+      $(this).css('pointer-events', 'auto');
+    });
+    // And checked styles for press button
+    $(clickedItem).css('pointer-events', 'none');
+    $(clickedItem).addClass(className);
+  }
 
 
 })();
