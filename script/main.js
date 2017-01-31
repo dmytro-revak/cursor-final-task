@@ -11,6 +11,7 @@
   setFunctionsOnTheButtons();
   setResizeForFooter();
   setPageName();
+  fillActivityPanel();
 
 
   // Genetare and set avatar for personal IP
@@ -192,6 +193,19 @@
     // And checked styles for press button
     $(clickedItem).css('pointer-events', 'none');
     $(clickedItem).addClass(className);
+  }
+
+  function fillActivityPanel() {
+    var activityPanel = $('.each-days-activity-panel');
+    colorsForActivityItem = ['#eee', '#D6E685', '#8CC665', '#44A340', '#1E6823'];
+    var item = items[Math.floor(Math.random()*items.length)];
+    for (var i = 0; i < 475; i++) {
+
+      $('<div class="each-days-activity-panel-item"/>').css('backgotund-color' 'test'}).appendTo("body");
+      var currentItem = '<div class="each-days-activity-panel-item"></div>';
+      $(activityPanel).append(currentItem);
+
+    }
   }
 
 

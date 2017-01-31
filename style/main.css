@@ -699,6 +699,117 @@ div ul li .user-repo-nav-link {
   margin: 5px 0 0 25px;
 }
 
+/*activity panel body start*/
+
+.contribution-activity-panel-body {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5; 
+}
+
+.month-listm,.week-days-list, .visual-count-color-blocks {
+  list-style: none;
+}
+
+.activity-panel-list-item {
+  font-size: 10px;
+  color: #767676;
+}
+
+.month-item {
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.week-days-list {
+  padding-top: 6px;
+  padding-left: 29px;
+  float: left;
+  width: 59px;
+}
+
+.week-days-item {
+  margin-bottom: 10px;
+}
+
+.each-days-activity-panel {
+  float: left;
+  width: 748px;
+  height: 77px;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each-days-activity-panel-item {
+  height: 11px;
+  width: 11px;
+  display: inline-block;
+  background-color: green;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.contribution-activity-panel-contribution-count {
+  padding: 0 25px;
+}
+
+.learn-how-to-count-contribution {
+  float: left;
+}
+
+.learn-how-to-count-contribution-link:hover {
+  color: #4078C0;
+}
+
+.visual-count {
+  float: right;
+  line-height: 100%;
+}
+
+.visual-count-color-blocks {
+  float: left;
+  padding: 0 10px;
+}
+
+.visual-count-panel-text {
+  display: inline-block;
+  float: left;
+  color: #767676;
+  font-size: 11px;
+}
+
+.visual-count-color-block-item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+}
+
+.visual-count-color-block-item.first-item {
+  background-color: #eee;
+}
+
+.visual-count-color-block-item.second-item {
+  background-color: #D6E685;
+}
+
+.visual-count-color-block-item.third-item {
+  background-color: #8CC665;
+}
+
+.visual-count-color-block-item.fourth-item {
+  background-color: #44A340;
+}
+
+.visual-count-color-block-item.fourth-item {
+  background-color: #1E6823;
+}
+
+/*activity panel body end*/
+
 /*contribution activity panel end*/
 
 /*all main user content end */
