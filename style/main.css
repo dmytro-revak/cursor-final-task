@@ -628,8 +628,77 @@ div ul li .user-repo-nav-link {
   border-radius: 50%;
   display: inline-block;
 }
+
 /*user repositories panel end*/
 
+/*contribution activity panel start*/
 
+.last-year-contribution-amount {
+  float: left;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.contribution-settings {
+  float: right;
+}
+
+#contribution-settings-button {
+  font-size: 13px;
+  color: #767676;
+  user-select: none;
+  background-color: transparent;
+  border: 0; 
+  padding: 0;
+  text-decoration: none;
+  background-image: none;
+  box-shadow: none;
+}
+
+.dropdown-menu.user-menu.user-page-contribution-activity-menu {
+  position: absolute;
+  top: 630px;
+  left: 530px;
+  width: 328px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #666;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(200,200,200,0.4);
+  border-radius: 3px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu-header.user-page-contribution-activity-menu {
+  padding: 8px 10px;
+  line-height: 16px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.close-news.user-page-contribution-activity-menu {
+  color: #ccc;
+}
+
+.user-page-contribution-activity-menu-selected-header {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.user-page-contribution-activity-menu-selected-discrip {
+  display: block;
+  text-align: left;
+  white-space: pre-wrap;
+  margin: 5px 0 0 25px;
+}
+
+/*contribution activity panel end*/
 
 /*all main user content end */

@@ -17,8 +17,8 @@
   function setAvatar() {
     var headerAvatar = $('.avatar'),
         dropdownButtonAvatar = $('.content-avatar'),
-        userPageMainAvatar = $('.user-avatar-picture');
-    var avatars = [headerAvatar, dropdownButtonAvatar, userPageMainAvatar];
+        userPageMainAvatar = $('.user-avatar-picture'),
+        avatars = [headerAvatar, dropdownButtonAvatar, userPageMainAvatar];
     $(avatars).each(function () {
       $(this).attr('src', 'https://robohash.org/' + userIp + '.png');
     });
@@ -82,10 +82,10 @@
 
   // Set amount of contribute and total repositories
   function setRepoAndContributeAmount() {
-    var contributeItemAmount = $('.panel-item-contr');
-    var repoItemAmount = $('.panel-item-repo');
-    var contributeAmount = contributeItemAmount.length;
-    var repositoriesAmount = repoItemAmount.length;
+    var contributeItemAmount = $('.panel-item-contr'),
+        repoItemAmount = $('.panel-item-repo'),
+        contributeAmount = contributeItemAmount.length,
+        repositoriesAmount = repoItemAmount.length;
     $('.contribute-amount').text(contributeAmount);
     $('.repo-amount').text(repositoriesAmount);
   }
@@ -141,6 +141,7 @@
       $(repositoriesItem).each(function () {
         $(this).css('display', 'none');
       });
+      
       $(repositoriesItem).each(function (indexOfElement, itemElement) {
         // Get each item parameters
         var currentItemParameters = $(this).attr('data-class');
