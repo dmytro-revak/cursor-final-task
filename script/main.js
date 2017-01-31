@@ -211,6 +211,7 @@
         'data-placement': 'top',
         'title': 'n contributions on Mmm DD, YYYY',    
       });
+      // Add class for customize tooltip panel
       currentVisualItem.addClass('custom-tooltip');
       // Set bg-color
       currentVisualItem.css('background-color', randomColor);

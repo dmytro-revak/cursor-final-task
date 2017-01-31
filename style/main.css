@@ -64,14 +64,22 @@
 .dropdown-menu.caret-menu::after {
   content: "";
   position: absolute;
-  right: 10px;
-  top: -20px;
-  width: 0;
-  height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
   border-style: solid;
-  border-width: 10px 10px 10px 10px;
-  border-color: transparent transparent #ffffff transparent;
+  background: white;
+  border-right:1px solid #CAD5E0;
+  border-bottom:1px solid #CAD5E0;
+  border-left: none;
+  border-top: none;
+  transform:rotate(-135deg);
   z-index: 9999;
+}
+
+.dropdown-menu.caret-menu.new-repo-menu::after {
+  right: 18px;
+  top: -6px;
 }
 
 .avatar {
@@ -134,6 +142,11 @@
 
 .plus-symbol {
   margin-right: 10px;
+}
+
+.dropdown-menu.caret-menu.user-repo-menu::after {
+  right: 24px;
+  top: -6px;
 }
 
 /*Button with user menu end*/
@@ -813,6 +826,67 @@ div ul li .user-repo-nav-link {
 }
 
 /*activity panel body end*/
+
+/*contribution activity panel start*/
+
+/*text contribution activity panel start*/
+
+.contribution-activity-panel-year-buttons {
+  width: 11%;
+  float: right;
+}
+
+.contribution-activity-panel-year-buttons .list-group {
+  box-shadow: none;
+}
+
+.contribution-activity-panel-year-buttons .list-group-item {
+  padding: 8px 16px;
+  margin: 0 0 2px;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.contribution-activity-text-panel-text-header {
+  float: left;
+  width: 89%;
+}
+
+.contribution-activity-panel-header-link {
+  float: right;
+}
+
+.dropdown.jump-to {
+  margin-right: 32px;
+  list-style: none;
+}
+
+.jump-to-text {
+  font-size: 13px;
+  color: #767676;
+  margin-right: 2px;
+}
+
+.dropdown-toggle.plus-caret.hover-item:hover {
+  text-decoration: none;
+}
+
+.turn-to-repo-menu {
+  top: 26px;
+  left: -82px;
+}
+
+.dropdown-menu.caret-menu.turn-to-repo-menu::after {
+  top: -6px;
+  left: 132px;
+}
+
+/*text contribution activity panel end*/
+
 
 /*contribution activity panel end*/
 
