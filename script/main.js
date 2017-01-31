@@ -195,17 +195,29 @@
     $(clickedItem).addClass(className);
   }
 
+  // Generate and set visual panel item and set random backgrond for it
   function fillActivityPanel() {
     var activityPanel = $('.each-days-activity-panel');
+    // All possible color for items
     colorsForActivityItem = ['#eee', '#D6E685', '#8CC665', '#44A340', '#1E6823'];
-    var item = items[Math.floor(Math.random()*items.length)];
-    for (var i = 0; i < 475; i++) {
-
-      $('<div class="each-days-activity-panel-item"/>').css('backgotund-color' 'test'}).appendTo("body");
-      var currentItem = '<div class="each-days-activity-panel-item"></div>';
-      $(activityPanel).append(currentItem);
-
+    // Generate all amount of items
+    for (var i = 0; i < 476; i++) {
+      // Choose random color and create the item
+      var randomColor = colorsForActivityItem[Math.floor(Math.random() * colorsForActivityItem.length)],
+          currentVisualItem = $('<div class="each-days-activity-panel-item"/>');
+      // Set hover attributes
+      currentVisualItem.attr({
+        'data-toggle': 'tooltip',
+        'data-placement': 'top',
+        'title': 'n contributions on Mmm DD, YYYY',    
+      });
+      currentVisualItem.addClass('custom-tooltip');
+      // Set bg-color
+      currentVisualItem.css('background-color', randomColor);
+      //Add item to the panel
+      $(activityPanel).append(currentVisualItem);
     }
+  $('[data-toggle="tooltip"]').tooltip();
   }
 
 

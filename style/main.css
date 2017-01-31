@@ -747,7 +747,6 @@ div ul li .user-repo-nav-link {
   height: 11px;
   width: 11px;
   display: inline-block;
-  background-color: green;
   box-sizing: border-box;
   border: 1px solid white;
 }
@@ -806,6 +805,11 @@ div ul li .user-repo-nav-link {
 
 .visual-count-color-block-item.fourth-item {
   background-color: #1E6823;
+}
+
+.custom-tooltip + .tooltip > .tooltip-inner{
+  padding: 10px;
+  white-space: nowrap;
 }
 
 /*activity panel body end*/
