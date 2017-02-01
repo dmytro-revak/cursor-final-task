@@ -12,6 +12,9 @@
   setResizeForFooter();
   setPageName();
   fillActivityPanel();
+  setHeightOfRepoPanelItem();
+  setColorLanguageDescripionIcon();
+  hoverChangeCommitsButtonLogo('open');
 
 
   // Genetare and set avatar for personal IP
@@ -59,7 +62,7 @@
 
   // Redirect user on tru github search page after form submit 
   function implementSearching() {
-    $('.search-field').submit( function(event) {
+    $('.search-input-form').submit( function(event) {
       event.preventDefault();
       var searchInfo = $('.search-input').val();
       window.location.href = ("https://github.com/search?utf8=✓&q=" + searchInfo + "&type=Repositories&ref=searchresults");
@@ -75,10 +78,11 @@
       var cuttentDateElement = $('.forked-date')[i];
       $(cuttentDateElement).text(date);
     }
-    // Creates random date beetwen two dates
-    function randomDate(start, end) {
-      return new Date( start.getTime() + Math.random() * (end.getTime() - start.getTime()) );
-    }
+  }
+
+  // Creates random date beetwen two dates
+  function randomDate(start, end) {
+    return new Date( start.getTime() + Math.random() * ( end.getTime() - start.getTime() ) );
   }
 
   // Set amount of contribute and total repositories
@@ -93,13 +97,25 @@
 
   // Set difference function for each button
   function setFunctionsOnTheButtons() {
-    var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news'),
+    var switchDahboardContent = $('.dropdown-menu-header.clearfix .close-news.main-page-button'),
         dashboardCloseButton = $('.icon-button-dashboard-wrapper .close-news'),
         newsInformationClose = $('.no-gutter .close-news'),
         repositoriesNavigationButtons = $('.repository-button'),
-        userRepoNavigationButtons = $('.user-repo-nav-link');
-    
+        userRepoNavigationButtons = $('.user-repo-nav-link'),
+        signOutButton = $('.sign-out-link'),
+        customizeRepoPanelButton = $('.repositories-panel-title-link'),
+        publickPrivateChekedButtons = $('.check-item'),
+        yearChangeButtons = $('.list-group-item'),
+        commitsPanelButton = $('.commits-link'),
+        moreActivityButton = $('.more-activity');
+
+    // Notie user when he sign out
+    $(signOutButton).on('click', function () {
+      alert('You sign out');
+    });
+
     // Change dashboard content and notice user about that
+      debugger
     $(switchDahboardContent).on('click', function () {
       setRandomDate();
       alert('Switch dashboard content');
@@ -127,11 +143,53 @@
       });
     });
 
+    // Change cheked style ater user click on show public/private contributions button
+    $(publickPrivateChekedButtons).each(function () {
+      $(this).on('click', function (e) {
+        e.preventDefault();
+        changeButtonStyleForClick(this, publickPrivateChekedButtons, 'checked-item');
+        alert('Change contributions to show');
+      });
+    });
+
     // Add changeButtoStyle function for user repositories navigation buttons
     $(userRepoNavigationButtons).each(function () {
       $(this).on('click', function () {
         changeButtonStyleForClick(this, userRepoNavigationButtons, 'active-link');        
       });
+    });
+
+    // Notice user about customizing repos panel
+    $(customizeRepoPanelButton).on('click', function () {
+      alert('Customize your repositories panel');
+    });
+
+    // Change style of year button in commits activity panel
+    $(yearChangeButtons).on('click', function (e) {
+      e.preventDefault();
+      changeButtonStyleForClick(this, yearChangeButtons, 'active'); 
+    });
+
+    // Change commits icon when user presses it and hide or show commits list. Default list are visible. Also change style when user hovers this icon
+    var state = 'open';
+    $(commitsPanelButton).on('click', function (e) {
+      e.preventDefault();
+      if (state === 'open') {
+        state = 'close';
+        $('.commits-list-symbol').attr("src", "img/close-commits-list.png");
+        $('.commits-list').css('display', 'none');
+        hoverChangeCommitsButtonLogo(state);
+      } else {
+        state = 'open';
+        $('.commits-list-symbol').attr("src", "img/open-commits-list.png");
+        $('.commits-list').css('display', 'block');
+        hoverChangeCommitsButtonLogo(state);
+      }
+    });
+
+    // Notice user for showing more commits activity
+    $(moreActivityButton).on('click', function () {
+      alert('Show more activity');
     });
 
     // Checkes which button user have pressed and show repo to need
@@ -148,7 +206,7 @@
         var currentItemParameters = $(this).attr('data-class');
         currentItemParameters = currentItemParameters.split(', ');
         // Do item visible when need button has pressed
-        for (i = 0; i < currentItemParameters.length; i++) {
+        for (var i = 0; i < currentItemParameters.length; i++) {
           if (buttonName === currentItemParameters[i]) {
             $(itemElement).css('display', 'block');
           }
@@ -160,13 +218,13 @@
   // Set and change footer text align 
   function setResizeForFooter() {
     // Set default text align
-    changeFooterTxtAlign();
+    changeFooterTextAlign();
     // Add resize event hendler
     $(window).resize(function () {
-      changeFooterTxtAlign();
+      changeFooterTextAlign();
     });
     // Changes footer text align when user change the screen width
-    function changeFooterTxtAlign() {
+    function changeFooterTextAlign() {
       if (screen.width < 800) {
         $('.right-wrap').css('text-align', 'left');
       } else {
@@ -199,17 +257,19 @@
   function fillActivityPanel() {
     var activityPanel = $('.each-days-activity-panel');
     // All possible color for items
-    colorsForActivityItem = ['#eee', '#D6E685', '#8CC665', '#44A340', '#1E6823'];
+    var colorsForActivityItem = ['#eee', '#D6E685', '#8CC665', '#44A340', '#1E6823'];
     // Generate all amount of items
     for (var i = 0; i < 476; i++) {
       // Choose random color and create the item
       var randomColor = colorsForActivityItem[Math.floor(Math.random() * colorsForActivityItem.length)],
-          currentVisualItem = $('<div class="each-days-activity-panel-item"/>');
+          currentVisualItem = $('<div class="each-days-activity-panel-item"/>'),
+          randomContribureDate = randomDate( new Date(2016, 0, 1), new Date(2017, 0, 1) );
+      randomContribureDate = moment(randomContribureDate).format('Do MMM YYYY');
       // Set hover attributes
       currentVisualItem.attr({
         'data-toggle': 'tooltip',
         'data-placement': 'top',
-        'title': 'n contributions on Mmm DD, YYYY',    
+        'title': '<b>№ contributions </b> <span class="tooltip-text"> on ' + randomContribureDate +' </span>',    
       });
       // Add class for customize tooltip panel
       currentVisualItem.addClass('custom-tooltip');
@@ -218,8 +278,50 @@
       //Add item to the panel
       $(activityPanel).append(currentVisualItem);
     }
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({html: true});
   }
 
+  // Set equals  height for tww elments in repo table line
+  function setHeightOfRepoPanelItem() {
+    var repotablesRowsList = $('.repositories-tables-item');
+    $(repotablesRowsList).each( function () {
+      var currentRepoDescriptions = $(this).find('.repo-item-description'),
+          listOfHeightes = [];
+      $(currentRepoDescriptions).each( function () {
+        var currentelementHeight = parseInt( $(this).css('height') );
+        listOfHeightes.push(currentelementHeight);
+      });
+      var maxHeight = Math.max(...listOfHeightes);
+      $(currentRepoDescriptions).each( function () {
+        $(this).css('height', maxHeight);
+      });
+    });
+  }
+
+  // Set needed color for each repo item logo
+  function setColorLanguageDescripionIcon() {
+    var allRepoLanguageLogos = $('.language-logo'),
+        colorIconRules = {
+          'HTML': '#E44B23',
+          'CSS': '#563D7C',
+          'JavaScript': '#F1E05A',
+        }; 
+    $(allRepoLanguageLogos).each( function () {
+      // Get rule for logo color from next dscripion element 
+      var currentLogoItemColor = $(this).next().text();
+      // Set needed color
+      $(this).css('background-color', colorIconRules[currentLogoItemColor]);
+    });
+  }
+
+  // Change commits block logo when user hover it
+  function hoverChangeCommitsButtonLogo(state) {
+    $('.commits-link').hover(function() {
+        $('.commits-list-symbol').attr("src", "img/" + state + "-commits-list-blue.png");
+      }, function(){
+        $('.commits-list-symbol').attr("src", "img/" + state + "-commits-list.png");
+      }
+    );
+  }
 
 })();

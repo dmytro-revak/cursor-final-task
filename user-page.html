@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title> </title>
     <link rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-    crossorigin="anonymous">
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
     <link rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
-    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
-    crossorigin="anonymous">
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+          crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="SHORTCUT ICON" href="img/github-mark.png" type="image/x-icon">
   </head>
@@ -29,7 +29,7 @@
             </div>
             <!-- Logo end -->
             <!-- Search field start -->
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left search-input-form">
               <div class="form-group">
                 <input type="text" class="form-control search-input" placeholder="Search GitHub">
               </div>
@@ -52,7 +52,7 @@
                 <a href="#" class="dropdown-toggle plus-caret hover-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span>+</span><span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu caret-menu">
+                <ul class="dropdown-menu caret-menu new-repo-menu">
                   <li>
                     <a href="https://github.com/new">New repository</a>
                   </li>
@@ -72,13 +72,13 @@
                   <img src="https://robohash.org/#.png" class="avatar" alt="avatar"> 
                   <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu caret-menu">
+                <ul class="dropdown-menu caret-menu user-repo-menu">
                   <li class="dropdown-header"><span class="dropdown-header-item">Signed in as </span>
                     <span class="dropdown-header-item menu-user-name"></span>
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="#">Your profile</a>
+                    <a href="user-page.html">Your profile</a>
                   </li>
                   <li>
                     <a href="https://github.com/stars">Your stars</a>
@@ -96,7 +96,7 @@
                   <li>
                     <a href="https://github.com/settings/profile">Settings</a>
                   </li>
-                  <li>
+                  <li class="sign-out-link">
                     <a href="#">Sign out</a>
                   </li>
                 </ul>
@@ -114,7 +114,7 @@
           <div class="user-information col-lg-3">
             <div class="user-avatar">
               <a href="user-page.html" class="user-avatar-link">
-                <img src="https://robohash.org/#.png" class="user-avatar-picture">
+                <img src="https://robohash.org/#.png" alt="user-avatar-picture" class="user-avatar-picture">
               </a>
             </div>
             <h2 class="user-name menu-user-name">
@@ -130,8 +130,8 @@
             </div>
             <div class="organizations">
               <h5 class="organizations-heading">Organizations</h5>
-              <a href="https://github.com/cursor-education" class="organizations-link">
-                <img src="img/logo-cursor.png" class="organizations-logo">
+              <a href="https://github.com/cursor-education" class="organizations-link" data-toggle="tooltip" data-placement="top" title="cursor-education">
+                <img src="img/logo-cursor.png" alt="organizations-logo" class="organizations-logo">
               </a>
             </div>
           </div>
@@ -210,7 +210,7 @@
                         <div class="repo-item-description">Repository description</div>
                         <div class="repo-item-language">
                           <span class="language-logo"></span>
-                          <span class="language-description">Repository language</span>
+                          <span class="language-description">HTML</span>
                         </div>
                       </div>
                     </li>
@@ -223,7 +223,7 @@
                         <div class="repo-item-description">Repository description</div>
                         <div class="repo-item-language">
                           <span class="language-logo"></span>
-                          <span class="language-description">Repository language</span>
+                          <span class="language-description">JavaScript</span>
                         </div>
                       </div>  
                       <div class="repositories-tables-item-content"> 
@@ -231,10 +231,15 @@
                           <a href="#">Repository name</a>
                         </div>
                         <div class="repo-item-ongoing">Repository ongoing</div>
-                        <div class="repo-item-description">Repository description</div>
+                        <div class="repo-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                         <div class="repo-item-language">
                           <span class="language-logo"></span>
-                          <span class="language-description">Repository language</span>
+                          <span class="language-description">JavaScript</span>
                         </div>
                       </div>
                     </li>
@@ -247,7 +252,7 @@
                         <div class="repo-item-description">Repository description</div>
                         <div class="repo-item-language">
                           <span class="language-logo"></span>
-                          <span class="language-description">Repository language</span>
+                          <span class="language-description">CSS</span>
                         </div>
                       </div>
                       <div class="repositories-tables-item-content">
@@ -274,33 +279,34 @@
                   328 contributions in the last year
                 </div>
                 <div class="contribution-settings">
-                  <!-- <span class="contribution-settings-text">Contribution settings</span> -->
-                  <button class="btn btn-default dropdown-toggle" type="button" id="contribution-settings-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Contribution settings
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu user-menu user-page-contribution-activity-menu" aria-labelledby="dropdownMenuDivider">
-                    <li class="dropdown-menu-header user-page-contribution-activity-menu clearfix">
-                      Select which contributions to show
-                      <button class="close-news user-page-contribution-activity-menu">&#10006;</button>
-                    </li>
-                    <li class="check-item">
-                      <a href="#">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                        <span class="user-page-contribution-activity-menu-selected-header">Pablic contributions only</span>
-                        <span class="user-page-contribution-activity-menu-selected-discrip">Visitors for your profile will only see your contributions to public repositories.</span>
-                      </a>
-                    </li>
-                    <li class="#">
-                      <a href="https://github.com/orgs/cursor-education/dashboard">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                        <span class="user-page-contribution-activity-menu-selected-header">
-                          Pablic and private contributions
-                        </span>
-                        <span class="user-page-contribution-activity-menu-selected-discrip">Visitors to your profile will only see your public anonymized private contributions.</span>
-                      </a>
-                    </li>
-                  </ul>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle grey-text" type="button" id="contribution-settings-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Contribution settings
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu caret-menu user-menu user-page-contribution-activity-menu" aria-labelledby="dropdownMenuDivider">
+                      <li class="dropdown-menu-header user-page-contribution-activity-menu clearfix">
+                        Select which contributions to show
+                        <button class="close-news user-page-contribution-activity-menu">&#10006;</button>
+                      </li>
+                      <li class="check-item checked-item">
+                        <a href="#">
+                          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                          <span class="user-page-contribution-activity-menu-selected-header">Pablic contributions only</span>
+                          <span class="user-page-contribution-activity-menu-selected-discrip">Visitors for your profile will only see your contributions to public repositories.</span>
+                        </a>
+                      </li>
+                      <li class="check-item">
+                        <a href="#">
+                          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                          <span class="user-page-contribution-activity-menu-selected-header">
+                            Pablic and private contributions
+                          </span>
+                          <span class="user-page-contribution-activity-menu-selected-discrip">Visitors to your profile will only see your public anonymized private contributions.</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="contribution-activity-panel-body">
@@ -337,7 +343,7 @@
                     </a>
                   </div>
                   <div class="visual-count">
-                    <span class="visual-count-panel-text">Less</span>
+                    <span class="visual-count-panel-text grey-text">Less</span>
                     <ul class="visual-count-color-blocks">
                       <li class="visual-count-color-block-item first-item"></li>
                       <li class="visual-count-color-block-item second-item"></li>
@@ -345,7 +351,7 @@
                       <li class="visual-count-color-block-item fourth-item"></li>
                       <li class="visual-count-color-block-item fifth-item"></li>
                     </ul>
-                    <span class="visual-count-panel-text">More</span>
+                    <span class="visual-count-panel-text grey-text">More</span>
                   </div>
                 </div>
               </div>
@@ -367,24 +373,71 @@
                   <ul class="contribution-activity-panel-header-link">
                     <li class="dropdown jump-to">
                       <a href="#" class="dropdown-toggle plus-caret hover-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="jump-to-text">Jump to</span><span class="caret jump-to-text"></span>
+                        <span class="jump-to-text grey-text">Jump to</span><span class="caret jump-to-text grey-text"></span>
                       </a>
                       <ul class="dropdown-menu caret-menu turn-to-repo-menu">
                         <li>
-                          <a href="https://github.com/new">First pull requests</a>
+                          <a href="#">First pull requests</a>
                         </li>
                         <li>
-                          <a href="https://github.com/new/import">First repository</a>
+                          <a href="#">First repository</a>
                         </li>
                         <li>
-                          <a href="https://gist.github.com/">Joined GitHub</a>
+                          <a href="#">Joined GitHub</a>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="contribution-activity-text-panel-body"></div>
+              <div class="contribution-activity-text-panel-body">
+                <div class="commits-container">
+                  <div class="commits-container-heding clearfix">
+                    <span class="bold-text-month">January</span> <span class="year-text">2017</span>
+                  </div>
+                    <span class="conmmit-symbol-container">
+                      <img src="img/commit-symbol.png" alt="commit-symbol" class="commit-symbol">
+                    </span>
+                  <div class="commits-link-header clearfix">
+                    <a href="#" class="commits-link">Created 345 commits in 3 repositories
+                      <img src="img/open-commits-list.png" alt="open commits symbol" class="commits-list-symbol">
+                    </a>
+                  </div>
+                  <ul class="commits-list">
+                    <li class="commits-list-item">
+                      <a href="user-page.html" class="menu-user-name text-link"></a>/
+                      <a href="#" class="text-link">First repository</a>
+                      <a href="#" class="commits-amount-link grey-text">48 commits</a>
+                      <div class="progress commits-progress">
+                        <div class="progress-bar progr-com high-over-fifty-procent" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="commits-list-item">
+                      <a href="user-page.html" class="menu-user-name text-link"></a>/
+                      <a href="#" class="text-link">Second repository</a>
+                      <a href="#" class="commits-amount-link grey-text">186 commits</a>
+                      <div class="progress commits-progress">
+                        <div class="progress-bar progr-com over-fifty-procent" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 51%;">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="commits-list-item">
+                      <a href="user-page.html" class="menu-user-name text-link"></a>/
+                      <a href="#" class="text-link">Third repository</a>
+                      <a href="#" class="commits-amount-link grey-text">101 commits</a>
+                      <div class="progress commits-progress">
+                        <div class="progress-bar progr-com less-fifty-procent" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 14%;">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button class="more-activity">Show more activity</button>
+              <p class="profil-guide grey-text">
+                Seeing something unexpected? Take a look at the <a href="https://help.github.com/categories/setting-up-and-managing-your-github-profile/" class="text-link">GitHub profile guide</a>.
+              </p>
             </div>
             <!-- Contribution avtivity text panel end -->
           </div>
@@ -424,7 +477,7 @@
       </div>
       <!-- Footer end -->
     </div>
-
+    <!-- Container end -->
     <script type="text/javascript" src="https://l2.io/ip.js? var=userIp"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

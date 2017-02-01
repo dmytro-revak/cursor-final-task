@@ -4,6 +4,10 @@
   clear: both;
 }
 
+.grey-text {
+  color: #767677;
+}
+
 /* Header style start */
 
 .navbar-nav > li > .dropdown-menu {
@@ -38,11 +42,7 @@
   font-weight: bold;
 }
 
-.navbar-default .navbar-nav .nav-link.hover-item:hover {
-  color: #4078C0;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav .nav-link.hover-item:hover, .navbar-default .navbar-nav>li>a:hover {
   color: #4078C0;
 }
 
@@ -133,6 +133,14 @@
 
 .hidden-symbol {
   visibility: hidden;
+}
+
+.switch-dasboard-content {
+  color: #ccc
+}
+
+.switch-dasboard-content:hover {
+  color: black;
 }
 
 .support-menu-logo {
@@ -262,8 +270,7 @@
 
 /*Information part end*/
 
-
-/*News/blog panel start*/
+/*News-blog panel start*/
 
 .news-content {
   padding: 10px 14px 10px 10px;
@@ -290,7 +297,7 @@
   margin-left: 15%;
 }
       
-/*News/blog panel end*/
+/*News-blog panel end*/
 
 /*Broadcasts start*/
 
@@ -455,19 +462,7 @@
 
 /*Footer end*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------*/
+/*------------------------------------------User page styles------------------------------------------------------------*/
 
 /*main content start*/
 
@@ -501,7 +496,7 @@
 }
 
 .organizations-logo {
-  width: 35px;
+  width: 30px;
 }
 
 .organizations-heading {
@@ -509,7 +504,6 @@
 }
 
 /*user-information start*/
-
 
 /*all main user content start */
 
@@ -586,7 +580,7 @@ div ul li .user-repo-nav-link {
   color: #767676;
 }
 
-.repositories-panel-title-link:hover {
+.repositories-panel-title-link:hover, .repositories-panel-title-link:focus {
   color: #4078c0;
   text-decoration: none;
 }
@@ -606,7 +600,7 @@ div ul li .user-repo-nav-link {
   border: 1px #ddd solid;
   display: inline-block;
   box-sizing: border-box;
-  padding: 16px;
+  padding: 16px 16px 7px 16px;
   margin-bottom: 16px;
   border-radius: 3px;
   font-size: 12px;
@@ -637,7 +631,8 @@ div ul li .user-repo-nav-link {
 .language-logo {
   width: 12px;
   height: 12px;
-  background-color: violet;
+  margin-bottom: -2px;
+  background-color: grey;
   border-radius: 50%;
   display: inline-block;
 }
@@ -658,8 +653,6 @@ div ul li .user-repo-nav-link {
 
 #contribution-settings-button {
   font-size: 13px;
-  color: #767676;
-  user-select: none;
   background-color: transparent;
   border: 0; 
   padding: 0;
@@ -668,11 +661,37 @@ div ul li .user-repo-nav-link {
   box-shadow: none;
 }
 
+#contribution-settings-button:hover {
+  color: #4078C0;
+}
+
+.close-news.user-page-contribution-activity-menu {
+  color: #ccc;
+}
+
+.close-news.user-page-contribution-activity-menu:hover {
+  color: black;
+}
+
+.check-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.check-item .glyphicon.glyphicon-ok {
+  color: transparent;
+}
+
+.check-item.checked-item.active .glyphicon.glyphicon-ok {
+  color: white;
+}
+
+.check-item.checked-item .glyphicon.glyphicon-ok {
+  color: black;
+}
+
 .dropdown-menu.user-menu.user-page-contribution-activity-menu {
-  position: absolute;
-  top: 630px;
-  left: 530px;
   width: 328px;
+  left: -192px;
   margin-top: 4px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -685,10 +704,15 @@ div ul li .user-repo-nav-link {
   box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
+.dropdown-menu.user-menu.user-page-contribution-activity-menu:after {
+  display: none;
+}
+
 .dropdown-menu-header.user-page-contribution-activity-menu {
   padding: 8px 10px;
   line-height: 16px;
   background: #f5f5f5;
+  border: none;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -789,7 +813,6 @@ div ul li .user-repo-nav-link {
 .visual-count-panel-text {
   display: inline-block;
   float: left;
-  color: #767676;
   font-size: 11px;
 }
 
@@ -820,9 +843,15 @@ div ul li .user-repo-nav-link {
   background-color: #1E6823;
 }
 
-.custom-tooltip + .tooltip > .tooltip-inner{
+.custom-tooltip + .tooltip > .tooltip-inner {
   padding: 10px;
-  white-space: nowrap;
+  max-width: 215px;
+  width: 215px;
+  /*white-space: nowrap;*/
+}
+
+.tooltip-text {
+  color: grey;
 }
 
 /*activity panel body end*/
@@ -852,7 +881,6 @@ div ul li .user-repo-nav-link {
 }
 
 .contribution-activity-text-panel-text-header {
-  float: left;
   width: 89%;
 }
 
@@ -867,11 +895,14 @@ div ul li .user-repo-nav-link {
 
 .jump-to-text {
   font-size: 13px;
-  color: #767676;
   margin-right: 2px;
 }
 
-.dropdown-toggle.plus-caret.hover-item:hover {
+.dropdown.jump-to:hover span {
+  color: #4078c0;
+}
+
+.dropdown-toggle.plus-caret.hover-item:focus, .dropdown-toggle.plus-caret.hover-item:hover {
   text-decoration: none;
 }
 
@@ -885,8 +916,146 @@ div ul li .user-repo-nav-link {
   left: 132px;
 }
 
-/*text contribution activity panel end*/
+.contribution-activity-text-panel-body {
+  width: 89%;
+  padding-left: 25px;
+}
 
+.contribution-activity-text-panel-body-heading {
+  padding: 4px 8px 4px 0;
+}
+
+.bold-text-month {
+  font-weight: bold;
+  display: inline-block;
+  float: left;
+}
+
+.year-text {
+  float: left;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.commits-container-heding {
+  margin-left: -65px;
+  margin-top: -11px;
+  z-index: 23;
+  background-color: white;
+  width: 14%;
+  margin-bottom: 20px;
+}
+
+.commits-container {
+  padding-left: 40px;
+  border: 1px solid #f5f5f5;
+  border-right: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 20px;
+}
+
+.conmmit-symbol-container {
+  text-align: center;
+  position: absolute;
+  left: 29px;
+  background-color: #f3f3f3;
+  width: 25px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.commits-link {
+  font-size: 16px;
+  color: #767676;
+  text-decoration: none;
+}
+
+.commits-link:hover, .commits-link:focus {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.commit-symbol {
+  width: 16px;
+}
+
+.commits-list-symbol {
+  float: right;
+  width: 18px;
+  margin-right: 15px;
+}
+
+.commits-list {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 40px;
+}
+
+.commits-list-item {
+  margin: 10px 0px;
+}
+
+.commits-amount-link {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.commits-progress {
+  width: 20%;
+  height: 8px;
+  float: right;
+  margin-bottom: 0px;
+  margin-top: 6px;
+  box-shadow: none;
+  background-image: none;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.progr-com {
+  background-image: none;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.high-over-fifty-procent {
+  background-color: #1E6823;
+}
+
+.over-fifty-procent {
+  background-color: #8CC665
+}
+
+.less-fifty-procent {
+  background-color: #D6E685;
+}
+
+.more-activity {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 6px;
+  font-weight: 600;
+  color: #4078c0;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 8px 0;
+  width: 89%;
+  font-size: 12px ;
+}
+
+.more-activity:hover {
+background-color: #f5f5f5;
+}
+
+.profil-guide {
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+
+/*text contribution activity panel end*/
 
 /*contribution activity panel end*/
 
