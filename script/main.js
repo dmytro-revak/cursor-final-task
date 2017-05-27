@@ -17,7 +17,7 @@
   hoverChangeCommitsButtonLogo('open');
 
 
-  // Genetare and set avatar for personal IP
+  // Generate and set avatar for personal IP
   function setAvatar() {
     var headerAvatar = $('.avatar'),
         dropdownButtonAvatar = $('.content-avatar'),
@@ -75,12 +75,12 @@
       var date = randomDate( new Date(2016 - i, 0, 1), new Date(2017 - i, 0, 1) );
       date = moment(date).format('Do MMM YYYY');
       // Set date to panel
-      var cuttentDateElement = $('.forked-date')[i];
-      $(cuttentDateElement).text(date);
+      var currentDateElement = $('.forked-date')[i];
+      $(currentDateElement).text(date);
     }
   }
 
-  // Creates random date beetwen two dates
+  // Creates random date between two dates
   function randomDate(start, end) {
     return new Date( start.getTime() + Math.random() * ( end.getTime() - start.getTime() ) );
   }
@@ -109,13 +109,12 @@
         commitsPanelButton = $('.commits-link'),
         moreActivityButton = $('.more-activity');
 
-    // Notie user when he sign out
+    // Notice user when he sign out
     $(signOutButton).on('click', function () {
       alert('You sign out');
     });
 
     // Change dashboard content and notice user about that
-      debugger
     $(switchDahboardContent).on('click', function () {
       setRandomDate();
       alert('Switch dashboard content');
@@ -143,7 +142,7 @@
       });
     });
 
-    // Change cheked style ater user click on show public/private contributions button
+    // Change checked style after user click on show public/private contributions button
     $(publickPrivateChekedButtons).each(function () {
       $(this).on('click', function (e) {
         e.preventDefault();
@@ -152,7 +151,7 @@
       });
     });
 
-    // Add changeButtoStyle function for user repositories navigation buttons
+    // Add changeButtonStyle function for user repositories navigation buttons
     $(userRepoNavigationButtons).each(function () {
       $(this).on('click', function () {
         changeButtonStyleForClick(this, userRepoNavigationButtons, 'active-link');        
@@ -192,7 +191,7 @@
       alert('Show more activity');
     });
 
-    // Checkes which button user have pressed and show repo to need
+    // Check which button user have pressed and show repo to need
     function removeAnchekedRepoItem(buttonName) {
       // Get all panel item
       var repositoriesItem = $('.repositories-item');
@@ -219,7 +218,7 @@
   function setResizeForFooter() {
     // Set default text align
     changeFooterTextAlign();
-    // Add resize event hendler
+    // Add resize event handler
     $(window).resize(function () {
       changeFooterTextAlign();
     });
@@ -243,7 +242,7 @@
 
   // Add curtain style class for certain button from buttons
   function changeButtonStyleForClick(clickedItem, buttonsArray, className) {
-    // Remove cheked class from all buttons
+    // Remove checked class from all buttons
     $(buttonsArray).each(function () {
       $(this).removeClass(className);
       $(this).css('pointer-events', 'auto');
@@ -253,7 +252,7 @@
     $(clickedItem).addClass(className);
   }
 
-  // Generate and set visual panel item and set random backgrond for it
+  // Generate and set visual panel item and set random background for it
   function fillActivityPanel() {
     var activityPanel = $('.each-days-activity-panel');
     // All possible color for items
@@ -281,7 +280,7 @@
   $('[data-toggle="tooltip"]').tooltip({html: true});
   }
 
-  // Set equals  height for tww elments in repo table line
+  // Set equals  height for tww elements in repo table line
   function setHeightOfRepoPanelItem() {
     var repotablesRowsList = $('.repositories-tables-item');
     $(repotablesRowsList).each( function () {
@@ -304,10 +303,10 @@
         colorIconRules = {
           'HTML': '#E44B23',
           'CSS': '#563D7C',
-          'JavaScript': '#F1E05A',
+          'JavaScript': '#F1E05A'
         }; 
     $(allRepoLanguageLogos).each( function () {
-      // Get rule for logo color from next dscripion element 
+      // Get rule for logo color from next description element
       var currentLogoItemColor = $(this).next().text();
       // Set needed color
       $(this).css('background-color', colorIconRules[currentLogoItemColor]);
