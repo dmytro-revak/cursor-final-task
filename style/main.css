@@ -24,7 +24,7 @@
 }
 
 .search-field {
-  padding: 0px;
+  padding: 0;
   width: 30%;
 }
 
@@ -68,7 +68,7 @@
   width: 10px;
   height: 10px;
   border-style: solid;
-  background: white;
+  background: #fff;
   border-right:1px solid #CAD5E0;
   border-bottom:1px solid #CAD5E0;
   border-left: none;
@@ -405,7 +405,7 @@
 }
 
 .repository-button {
-  padding: 5px 5px 0px;
+  padding: 5px 5px 0;
   margin-right: 5px;
   border: 0;
   border-bottom: 2px solid transparent;
@@ -437,12 +437,12 @@
 }
 
 .left-wrap {
-  padding: 0px;
+  padding: 0;
   margin-bottom: 5px;
 }
 
 .right-wrap {
-  padding: 0px;
+  padding: 0;
   text-align: right;
 }
 
@@ -508,7 +508,7 @@
 /*all main user content start */
 
 .all-user-main-content.col-lg-9 {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 /*user repo navigation start*/
@@ -525,7 +525,7 @@
 .user-repo-nav-link.active-link {
   color: #333;
   border-bottom-color: #c9510c;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .user-repo-nav-link.active-link:focus, .user-repo-nav-link.active-link:hover {
@@ -533,7 +533,7 @@
 }
 
 div ul li .user-repo-nav-link {
-  border-radius: 0px;
+  border-radius: 0;
   display: table-cell;
   padding: 15px 20px;
   font-size: 14px;
@@ -567,7 +567,7 @@ div ul li .user-repo-nav-link {
   font-weight: normal;
   float: left;
   font-size: 16px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .repositories-panel-customize-heading {
@@ -598,7 +598,6 @@ div ul li .user-repo-nav-link {
   width: 418px;
   display: inline-block;
   border: 1px #ddd solid;
-  display: inline-block;
   box-sizing: border-box;
   padding: 16px 16px 7px 16px;
   margin-bottom: 16px;
@@ -988,12 +987,12 @@ div ul li .user-repo-nav-link {
 .commits-list {
   margin-top: 15px;
   list-style: none;
-  padding-left: 0px;
+  padding-left: 0;
   margin-bottom: 40px;
 }
 
 .commits-list-item {
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 .commits-amount-link {
@@ -1005,7 +1004,7 @@ div ul li .user-repo-nav-link {
   width: 20%;
   height: 8px;
   float: right;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-top: 6px;
   box-shadow: none;
   background-image: none;
@@ -1033,8 +1032,6 @@ div ul li .user-repo-nav-link {
 
 .more-activity {
   background-color: #f5f5f5;
-  width: 100%;
-  padding: 6px;
   font-weight: 600;
   color: #4078c0;
   background: #fff;
